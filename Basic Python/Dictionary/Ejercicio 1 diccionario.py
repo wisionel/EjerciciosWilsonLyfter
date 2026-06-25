@@ -1,0 +1,45 @@
+hotel_list= [
+{ 
+    "name":"Hotel Intercontinental",
+    "stars":4,
+    "rooms":[
+        {
+            "number":1,
+            "floor":1,
+            "price":200
+        },
+        {
+            "number":2,
+            "floor":2,
+            "price":300
+        },
+        {
+            "number":3,
+            "floor":3,
+            "price":400
+        }
+        ]
+},
+{
+    "name":"Sheraton",
+    "stars":4,
+    "rooms":[
+        {
+            "number":1,
+            "floor":1,
+            "price":200
+        },
+        {
+            "number":2,
+            "floor":2,
+            "price":300
+        },
+        {
+            "number":3,
+            "floor":3,
+            "price":400
+        }
+    ]
+}
+]
+print(hotel_list[1]["rooms"][2]["number"])
