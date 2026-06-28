@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Pikachu",
+    "type": "Electric",
+    "level": 54,
+    "weight_kg": 6.0,
+    "is_shiny": false,
+    "held_item": null,
+    "skills": [
+      "Thunder Shock",
+      "Quick Attack",
+      "Thunderbolt",
+      "Volt Tackle"
+    ],
+    "stats": {
+      "hp": 35,
+      "attack": 55,
+      "defense": 40,
+      "sp_attack": 50,
+      "sp_defense": 50,
+      "speed": 90
+    }
+  },
+  {
+    "name": "Charmander",
+    "type": "Fire",
+    "level": 8,
+    "weight_kg": 8.5,
+    "is_shiny": true,
+    "held_item": "Charcoal",
+    "skills": [
+      "Ember",
+      "Scratch",
+      "Tackle",
+      "Smokescreen"
+    ],
+    "stats": {
+      "hp": 39,
+      "attack": 52,
+      "defense": 43,
+      "sp_attack": 60,
+      "sp_defense": 50,
+      "speed": 65
+    }
+  },
+  {
+    "name": "Pokemon X",
+    "type": "Water",
+    "level": "34",
+    "weight_kg": 43.0,
+    "is_shiny": true,
+    "held_item": "XO",
+    "skills": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "stats": {
+      "hp": 43,
+      "attack": 54,
+      "defense": 23,
+      "sp_attack": 43,
+      "sp_defense": 12,
+      "speed": 23
+    }
+  },
+  {
+    "name": "x",
+    "type": "x",
+    "level": "324",
+    "weight_kg": 43.0,
+    "is_shiny": false,
+    "held-item": null,
+    "skills": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "stats": {
+      "hp": 32,
+      "attack": 43,
+      "defense": 54,
+      "sp_attack": 322,
+      "sp_defense": 342,
+      "speed": 32
+    }
+  }
+]
