@@ -59,7 +59,7 @@ def science():
 def student_inputer():
     student_list=[]
     counter=1
-    student_quantity=None
+    student_quantity=0
     try:
         student_quantity=int(input("Ingrese la cantidad de estudiantes a ingresar "))
     except ValueError:
@@ -76,6 +76,4 @@ def student_inputer():
         student_dictionary["Nota Promedio"]=(student_dictionary["Nota Español"] + student_dictionary["Nota Ingles"] + student_dictionary["Nota Estudios Sociales"] + student_dictionary["Nota Ciencias"])/4
         student_list.append(student_dictionary)
         counter+=1
-    print (student_list)
     return student_list
-
