@@ -5,6 +5,11 @@ def student_importer(path):
         reader=csv.DictReader(file)
         new_list=[]
         for line in reader:
+            float(line["Nota Español"])
+            float(line["Nota Ingles"])
+            float(line["Nota Estudios Sociales"])
+            float(line["Nota Ciencias"])
+            float(line["Nota Promedio"])
             new_list.append(line)
         return new_list
 

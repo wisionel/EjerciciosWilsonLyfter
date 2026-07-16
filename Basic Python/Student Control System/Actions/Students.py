@@ -12,11 +12,11 @@ def spanish():
     my_grade=None
     try:
         my_grade=int(input("Ingrese la nota de español "))
-        if my_grade <=1 or my_grade>=100:
+        if my_grade <1 or my_grade>100:
             raise ValueError()
     except ValueError:
         print("Ingrese un valor entre 1-100")
-        spanish()
+        return spanish()
     return my_grade
 
 
@@ -24,11 +24,11 @@ def english():
     my_grade=None
     try:
         my_grade=int(input("Ingrese la nota de ingles "))
-        if my_grade <=1 or my_grade>=100:
+        if my_grade <1 or my_grade>100:
             raise ValueError()
     except ValueError:
         print("Ingrese un valor entre 1-100")
-        english()
+        return english()
     return my_grade
 
 
@@ -36,11 +36,11 @@ def social_studies():
     my_grade=None
     try:
         my_grade=int(input("Ingrese la nota de estudios sociales "))
-        if my_grade <=1 or my_grade>=100:
+        if my_grade <1 or my_grade>100:
             raise ValueError()
     except ValueError:
         print("Ingrese un valor entre 1-100")
-        social_studies()
+        return social_studies()
     return my_grade
 
 
@@ -48,11 +48,11 @@ def science():
     my_grade=None
     try:
         my_grade=int(input("Ingrese la nota de ciencia "))
-        if my_grade <=1 or my_grade>=100:
+        if my_grade <1 or my_grade>100:
             raise ValueError()
     except ValueError:
         print("Ingrese un valor entre 1-100")
-        science()
+        return science()
     return my_grade
 
 
