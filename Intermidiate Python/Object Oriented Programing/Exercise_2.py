@@ -11,6 +11,7 @@ class Bus:
 
     def offboard(self):
         self.passengers.pop()
+        print("Se ha bajado una persona del bus")
 
 class Person:
     def __init__(self, name):
