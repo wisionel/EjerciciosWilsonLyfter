@@ -1,6 +1,7 @@
 class Bus:
-    max_passengers=2
-    passengers=[]
+    def __init__(self,max_passengers):
+        self.max_passengers=max_passengers
+        self.passengers=[]
 
     def onboard(self,person):
         if len(self.passengers)>= self.max_passengers:
@@ -10,8 +11,12 @@ class Bus:
             print(f"{person} se subio al bus")
 
     def offboard(self):
-        self.passengers.pop()
-        print("Se ha bajado una persona del bus")
+        try:
+            self.passengers.pop()
+            print("Se ha bajado una persona del bus")
+        except:
+            print("El bus ya esta vacio")
+            
 
 class Person:
     def __init__(self, name):
@@ -25,10 +30,10 @@ class Person:
 person_1=Person("Wilson")
 person_2=Person("Cindy")
 person_3=Person("Kendy")
-my_bus=Bus()
-my_bus.onboard(person_1)
-my_bus.onboard(person_2)
-my_bus.onboard(person_3)
+my_bus=Bus(2)
+#my_bus.onboard(person_1)
+#my_bus.onboard(person_2)
+#my_bus.onboard(person_3)
 my_bus.offboard()
 my_bus.onboard(person_3)
 
