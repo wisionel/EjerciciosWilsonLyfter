@@ -5,7 +5,8 @@ class Product:
         self.quantity=int(quantity)
 
 class Inventory:
-    inventory_list=[]
+    def __init__(self):
+        self.inventory_list=[]
     def add(self,product):
         self.inventory_list.append(product)
         print(f"Se ha agregado {product.name} al inventario")

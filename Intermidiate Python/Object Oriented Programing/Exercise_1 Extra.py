@@ -1,16 +1,11 @@
 class Rectangle:
-    def __init__(self,width,height):
-        self.width=None
-        self.height=None
-        try:
-            self.width=width
-            self.height=height
-            if height < 0:
-                raise Exception()
-            elif width < 0:
-                raise Exception()
-        except Exception:
-            print("El valor no puede ser negativo") 
+    def __init__(self):
+        self.width=int(input("Ingrese el valor "))
+        self.height=int(input("Ingrese el valor "))
+        if self.height < 0:
+            raise Exception()
+        elif self.width < 0:
+            raise Exception()
 
     def get_area(self):
         area=self.width*self.height
@@ -22,7 +17,11 @@ class Rectangle:
         print(perimeter)
         return perimeter
 
-
-rectangle_1=Rectangle(2,2)
-rectangle_1.get_area()
-rectangle_1.get_perimeter()
+try:
+    rectangle_1=Rectangle()
+    rectangle_1.get_area()
+    rectangle_1.get_perimeter()
+except ValueError:
+    print("Ingrese un valor valido")
+except Exception:
+    print("El valor no puede ser negativo") 
