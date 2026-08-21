@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class User:
+class User(ABC):
     def __init__(self,name):
         self.name=name
     
@@ -21,11 +21,11 @@ class AdminUser(User):
         self.role=role
 
     def has_permission(self,action):
-        if action=="Read":
+        if action=="read":
             print(True)
-        elif action== "Write":
+        elif action== "write":
             print(True)
-        elif action=="Delete":
+        elif action=="delete":
             print(True)
 
 class RegularUser(User):
@@ -37,11 +37,11 @@ class RegularUser(User):
         self.role=role
 
     def has_permission(self,action):
-        if action=="Read":
+        if action=="read":
             print(True)
-        elif action== "Write":
+        elif action== "write":
             print(False)
-        elif action=="Delete":
+        elif action=="delete":
             print(False)
 
 manager_1=AdminUser("Wilson")
@@ -50,6 +50,6 @@ manager_1.get_role("Manager")
 intern_1.get_role("Intern 1")
 print(manager_1.role)
 print(intern_1.role)
-manager_1.has_permission("Write")
-intern_1.has_permission("Write")
+manager_1.has_permission("write")
+intern_1.has_permission("write")
 
