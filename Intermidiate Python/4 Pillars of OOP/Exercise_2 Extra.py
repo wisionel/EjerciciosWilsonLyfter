@@ -9,7 +9,7 @@ class User(ABC):
         pass
 
     @abstractmethod
-    def has_permission(self):
+    def has_permission(self,action):
         pass
 
 class AdminUser(User):
@@ -22,11 +22,11 @@ class AdminUser(User):
 
     def has_permission(self,action):
         if action=="read":
-            print(True)
+            return True
         elif action== "write":
-            print(True)
+            return True
         elif action=="delete":
-            print(True)
+            return True
 
 class RegularUser(User):
     def __init__(self, name):
@@ -38,11 +38,11 @@ class RegularUser(User):
 
     def has_permission(self,action):
         if action=="read":
-            print(True)
+            return True
         elif action== "write":
-            print(False)
+            return False
         elif action=="delete":
-            print(False)
+            return False
 
 manager_1=AdminUser("Wilson")
 intern_1=RegularUser("Mark")
@@ -50,6 +50,6 @@ manager_1.get_role("Manager")
 intern_1.get_role("Intern 1")
 print(manager_1.role)
 print(intern_1.role)
-manager_1.has_permission("write")
-intern_1.has_permission("write")
+print(manager_1.has_permission("write"))
+print(intern_1.has_permission("write"))
 

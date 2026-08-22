@@ -28,8 +28,7 @@ class Employee:
     def promote(self,percentage):
         if self.__salary>0:
             print("Aplicando el porcentaje de promocion")
-            decimal=percentage/100
-            new_salary=self.__salary+(self.__salary*decimal)
+            new_salary=self.__salary+(self.__salary*percentage)
             self.salary=new_salary
             print(f"El salario aumentado es de {new_salary}")
         else:
@@ -40,5 +39,5 @@ employee_1=Employee("Carlos",100)
 print(employee_1.name)
 print(employee_1.salary)
 employee_1.salary=200
-employee_1.promote(10)
+employee_1.promote(0.1)
 print(employee_1.salary)
