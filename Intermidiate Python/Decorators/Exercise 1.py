@@ -6,7 +6,9 @@ class Game:
         def wrapper(self,genre,plataform):
             print(f'Genero:{genre}')
             print(f'Plataforma:{plataform}')
-            func(self,genre,plataform)
+            function=func(self,genre,plataform)
+            print(function)
+            return function
         return wrapper
 
     @printer

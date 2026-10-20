@@ -3,26 +3,20 @@ def is_number(func):
         try:
             number_1=int(number_1)
             number_2=int(number_2)
-        except ValueError:
-            print("No se puede sumar valores no numerales")
-        func(number_1,number_2)
+            func(number_1,number_2)
+        except ValueError as error:
+            raise ValueError("No se puede sumar valores no numerales")
     return wrapper
     
 
 
 @is_number
 def add(number_1,number_2):
-    result=None
-    try:
-        result=number_1+number_2
-    except TypeError:
-        raise Exception()
+    result=number_1+number_2
     print(result)
 
 def main(number_1,number_2):
-    try:
-        add(number_1,number_2)
-    except Exception:
-        print("No se puede sumar valores no numerales")
+    add(number_1,number_2)
+    
 
 main("d",2)
